@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* CSS HEX */
+--celeste: #bcf4f5ff;
+--celadon: #b4ebcaff;
+--tea-green: #d9f2b4ff;
+--tea-green-2: #d3fac7ff;
+--cherry-blossom-pink: #ffb7c3ff;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    background-image: url("../imgs/bg/d5-render-YuuG5Sg82MA-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 30%;
+    min-width: 400px;
+    border: var(--celeste) 3px solid;
+    padding: 50px;
+    border-radius: 15px;
+    backdrop-filter: blur(50px);
+    text-align: center;
+}
+
+.city-Weather,.no-city-found{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.9s ease;
+}
+
+.no-city-found{
+    height: 300px;
+}
+
+.city-Weather{
+    height: 410px;
+}
+
+.hidden{
+    height: 0;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 10px 10px 20px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    outline: none;
+}
+
+.search-button{
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.no-city-found img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    margin-top: 20px;
+}
+
+.no-city-found p{
+    font-size: 24px;
+}
+
+.city-Weather .icon{
+    width: 170px;
+}
+
+.city-Weather .temperature{
+    font-size: 75px;
+    font-weight: 500;
+}
+
+.city-Weather .city{
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.city-Weather .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px ;
+}
+
+.details .detail{
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    text-align: left;
+}
+
+.detail img {
+    width: 40px ;
+}
+
+.detail .value{
+    font-size: 24px;
+}
